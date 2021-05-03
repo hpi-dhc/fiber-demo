@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  fiber-demo:
+    build: .
+    ports:
+      - "8999:8999"
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+      - MYSQL_DATABASE=fiber_db
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
