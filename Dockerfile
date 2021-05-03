@@ -10,5 +10,5 @@ ENV FIBER_DB_PORT=3306
 ENV FIBER_DB_SCHEMA=fiber_db
 EXPOSE 8999
 COPY . .
-RUN cd notebooks
-CMD ["jupyter", "notebook", "--port", "8999", "--no-browser", "--allow-root"]
+WORKDIR /fiber-demo/notebooks
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0", "--port", "8999", "--no-browser", "--allow-root"]
