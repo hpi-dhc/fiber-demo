@@ -10,6 +10,5 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=mysql
-      - MYSQL_DATABASE=fiber_db
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
