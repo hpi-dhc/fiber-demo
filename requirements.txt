@@ -1,2 +1,3 @@
 fiber @ git+https://github.com/hpi-dhc/fiber.git@master
 notebook
+ipywidgets
